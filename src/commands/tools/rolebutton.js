@@ -28,6 +28,18 @@ module.exports = {
       .setCustomId(`pvp3`)
       .setEmoji("🤺")
       .setStyle(`Secondary`);
+    const buttonPvp4 = new ButtonBuilder()
+        .setCustomId(`pvp4`)
+        .setEmoji("🟨")
+        .setStyle(`Secondary`);
+    const buttonPvp5 = new ButtonBuilder()
+        .setCustomId(`pvp5`)
+        .setEmoji("🟥")
+        .setStyle(`Secondary`);
+    const buttonPvp6 = new ButtonBuilder()
+        .setCustomId(`pvp6`)
+        .setEmoji("🟦")
+        .setStyle(`Secondary`);
 
       /* ------------------------------------------------------------
     PvE
@@ -66,10 +78,14 @@ spécialité
       .addComponents(buttonPvp2)
       .addComponents(buttonPvp3);
     const row2 = new ActionRowBuilder()
+        .addComponents(buttonPvp4)
+        .addComponents(buttonPvp5)
+        .addComponents(buttonPvp6);
+    const row3 = new ActionRowBuilder()
       .addComponents(buttonPve1)
       .addComponents(buttonPve2)
       .addComponents(buttonPve3);
-      const row3 = new ActionRowBuilder()
+      const row4 = new ActionRowBuilder()
           .addComponents(buttonSpe1)
           .addComponents(buttonSpe2)
           .addComponents(buttonSpe3);
@@ -81,6 +97,10 @@ spécialité
         {
           name: `PvP`,
           value: `Choisis là où tu préfères faire du PvP,\n🐎 Cyro\n🥷 Cité\n🤺 BG`,
+          inline: true,
+        },{
+          name: `Alliance`,
+          value: `Sélectionne ta couleur d'Alliance,\n🟨 Bananes\n🟥 Tomates\n🟦 Peugeot`,
           inline: true,
         },
         {
@@ -98,7 +118,7 @@ spécialité
     /**************************************************************************/
     //Sending the message
     interaction.channel.send({
-      components: [row1, row2,row3],
+      components: [row1,row2,row3,row4],
       embeds: [embed],
     });
     interaction.reply({
