@@ -80,17 +80,17 @@ spécialité
       .addFields([
         {
           name: `PvP`,
-          value: `Choisis là où tu préfères faire du PvP,\n🐎Cyro\n🥷Cité\n🤺BG`,
+          value: `Choisis là où tu préfères faire du PvP,\n🐎 Cyro\n🥷 Cité\n🤺 BG`,
           inline: true,
         },
         {
           name: `PvE`,
-          value: `Choisis ce que tu préfères faire, à savoir,\n1️⃣Raid normal\n2️⃣raid vet\n3️⃣raid HM`,
+          value: `Choisis ce que tu préfères faire, à savoir,\n1️⃣ Raid normal\n2️⃣ Raid vet\n3️⃣ Raid HM`,
           inline: true,
         },
         {
           name: `Spécialités`,
-          value: `Choisis ta/tes spécialité(s), à savoir,\n🛡️Tank\n🚑Heal\n⚔️DPS`,
+          value: `Choisis ta/tes spécialité(s), à savoir,\n🛡️ Tank\n🚑 Heal\n⚔️ DPS`,
           inline: true,
         },
       ])
@@ -98,7 +98,7 @@ spécialité
     /**************************************************************************/
     //Sending the message
     interaction.channel.send({
-      components: [row1, row2],
+      components: [row1, row2,row3],
       embeds: [embed],
     });
     interaction.reply({
