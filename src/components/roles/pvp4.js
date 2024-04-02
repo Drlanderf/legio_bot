@@ -1,6 +1,6 @@
 module.exports = {
     data: {
-        name: `pvp1`
+        name: `pvp4`
     },
     async execute(interaction,client){
         await interaction.member.roles.add("1224682386336387203");
