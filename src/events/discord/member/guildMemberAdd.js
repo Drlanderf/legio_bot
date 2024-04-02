@@ -1,9 +1,3 @@
-const Canvas = require("@napi-rs/canvas");
-const { promises } = require("fs");
-const { join } = require("path");
-const {
-  getCounterChannelName,
-} = require("../../../functions/tools/getCounterChannelName");
 const {
   GuildMember,
   Client,
@@ -25,7 +19,6 @@ module.exports = {
     /* ------------------------------------------------------------
 		Variables
 	   ------------------------------------------------------------ */
-    const MyWelcomeChannelID = guildProfile.guildJoinChannel;
     const MyRoleID00 = guildProfile.roleId00;
     const MyRoleID01 = guildProfile.roleId01;
     const MyRoleID02 = guildProfile.roleId02;
